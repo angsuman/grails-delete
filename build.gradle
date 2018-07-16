@@ -43,13 +43,14 @@ bootRun {
 bootRepackage.enabled = false
 grailsPublish {
     // TODO: Provide values here
-    user = 'user'
-    key = 'key'
-    githubSlug = 'foo/bar'
+    //user = 'user'
+    //key = 'key'
+    userOrg = 'Taragana Inc.'
+    githubSlug = 'angsuman/grails-delete'
+    developers = [angsuman: "Angsuman Chakraborty"]
     license {
-        name = 'Apache-2.0'
+        name = 'GPL-3.0'
     }
-    title = "My Plugin"
-    desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
+    title = "Delete"
+    desc = "Delete capabilities (delete-*) for create-* and generate-* commands"
 }
