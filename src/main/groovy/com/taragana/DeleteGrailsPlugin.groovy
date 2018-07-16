@@ -11,14 +11,27 @@ class DeleteGrailsPlugin extends Plugin {
         "grails-app/views/error.gsp"
     ]
 
-    // TODO Fill in these fields
-    def title = "Delete All Auto-Generated files from create-* and generate-* commaonds" // Headline display name of the plugin
+    def title = "Delete comands for auto-generated files from create-* and generate-* commaonds" // Headline display name of the plugin
     def author = "Angsuman Chakraborty"
     def authorEmail = "angsuman@taragana.com"
     def description = '''\
-Files are created when you run create-* and generate-* commands like create-domain-class or generate-all.
-Grails does not provide an inbuilt way to delete these artifacts when you realize you have wrongly created them and delete the auto-generated artifacts.
+in Grails files are created when you run create-* and generate-* commands like create-domain-class or generate-all.
+Grails does not provide an in-built way to delete these artifacts when you realize you have wrongly created them and delete the auto-generated artifacts.
+The following delete commands are provided corresponding to the create or generate commands:
+delete-all                 delete-command             delete-controller          
+delete-domain-class        delete-functional-test     delete-integration-test    
+delete-interceptor         delete-script              delete-service             
+delete-taglib              delete-unit-test           delete-views
+
 delete-all will delete all such artifacts. No errors will be shown for missing artifacts.
+
+delete commands operate silently. It does not care whether the file(s) have been modified. use with caution.
+
+Use help to get more details. For example:
+grails help delete-all
+grails help delete-unit-test
+grails help delete-views
+...
 '''
 
     // URL to the plugin's documentation
@@ -39,7 +52,7 @@ delete-all will delete all such artifacts. No errors will be shown for missing a
     def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
 
     // Online location of the plugin's browseable source code.
-    def scm = [ url: "https://github.com/grails-plugins" ]
+    def scm = [ url: "https://github.com/grails-delete" ]
 
 
 
