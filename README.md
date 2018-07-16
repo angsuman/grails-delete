@@ -17,7 +17,7 @@ grails help delete-all
 grails help delete-unit-test
 grails help delete-views
 
-##Install
+## Install
 Add the following to dependencies
 ```
 dependencies {
