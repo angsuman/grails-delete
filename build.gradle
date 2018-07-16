@@ -8,7 +8,7 @@ buildscript {
     }
 }
 
-version "0.2"
+version "0.3"
 group "com.taragana"
 
 apply plugin:"eclipse"
@@ -42,9 +42,8 @@ bootRun {
 // enable if you wish to package this plugin as a standalone application
 bootRepackage.enabled = false
 grailsPublish {
-    // TODO: Provide values here
-    //user = 'user'
-    //key = 'key'
+    user = System.getProperty('BINTRAY_USER')
+    key = System.getProperty('BINTRAY_KEY')
     userOrg = 'Taragana Inc.'
     githubSlug = 'angsuman/grails-delete'
     developers = [angsuman: "Angsuman Chakraborty"]
